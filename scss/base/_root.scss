@@ -1,0 +1,23 @@
+@use "../abstract" as *;
+
+:root {
+  @each $color, $shade in $colors {
+    @each $prop, $value in $shade {
+      --color#{$color}#{$prop}: #{$value};
+    }
+  }
+
+  @each $screen-size, $property in $type-scale {
+    @if $screen-size == small {
+      @each $prop, $value in $property {
+        --font-size-#{$prop}: #{$value};
+      }
+    } @else {
+      @include breakpoint-up(large) {
+        @each $prop, $value in $property {
+          --font-size-#{$prop}: #{$value};
+        }
+      }
+    }
+  }
+}

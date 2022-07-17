@@ -1,0 +1,51 @@
+@use "../util" as *;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: {
+    right: 1.6rem;
+    left: 1.6rem;
+  }
+  font-family: "DM Sans", sans-serif;
+  font-size: var(--font-size-200);
+  font-weight: $font-weight-medium;
+  background-color: $color-background-default;
+  color: $color-text-default;
+}
+
+h1 {
+  font-size: var(--font-size-300);
+}
+
+h1,
+.card__monthly-total .account-total,
+.card__monthly-increase .percent {
+  color: $color-text-strong;
+}
+
+h2 {
+  font-size: var(--font-size-200);
+  font-weight: inherit;
+}
+
+.card__monthly-total h2,
+.card__day {
+  color: $color-text-subtle;
+}
+
+.card__account-overview .account-balance {
+  font-size: var(--font-size-300);
+}
+
+.card__monthly-total .account-total {
+  font-size: var(--font-size-400);
+}
+
+.card__account-overview .account-balance,
+.card__monthly-total .account-total,
+.card__monthly-increase .percent {
+  font-weight: $font-weight-bold;
+}
