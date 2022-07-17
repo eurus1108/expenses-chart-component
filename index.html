@@ -4,7 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./style.min.css" />
     <title>Frontend Mentor | Expenses chart component</title>
   </head>
-  <body></body>
+  <body>
+    <main class="h-wrapper">
+      <section class="card">
+        <div class="card__container">
+          <div class="card__element">
+            <div class="card__balance">
+              <div class="card__account-overview">
+                <h2>My Balance</h2>
+                <div class="account-balance">&dollar;921.48</div>
+              </div>
+              <div class="card__logo-container">
+                <img src="./assets/logo.svg" alt="logo" />
+              </div>
+            </div>
+            <div class="card__data-container">
+              <div class="card__graph-overview">
+                <h1>Spending - Last 7 days</h1>
+                <div class="card__graph-data">
+                  <div class="card__graph-bar-container">
+                    <div class="card__graph-bar"></div>
+                    <p class="card__day" data-day=""></p>
+                  </div>
+                  <div class="card__graph-bar-container">
+                    <div class="card__graph-bar"></div>
+                    <p class="card__day" data-day=""></p>
+                  </div>
+                  <div class="card__graph-bar-container">
+                    <div class="card__graph-bar"></div>
+                    <p class="card__day" data-day=""></p>
+                  </div>
+                  <div class="card__graph-bar-container">
+                    <div class="card__graph-bar"></div>
+                    <p class="card__day" data-day=""></p>
+                  </div>
+                  <div class="card__graph-bar-container">
+                    <div class="card__graph-bar"></div>
+                    <p class="card__day" data-day=""></p>
+                  </div>
+                  <div class="card__graph-bar-container">
+                    <div class="card__graph-bar"></div>
+                    <p class="card__day" data-day=""></p>
+                  </div>
+                  <div class="card__graph-bar-container">
+                    <div class="card__graph-bar"></div>
+                    <p class="card__day" data-day=""></p>
+                  </div>
+                </div>
+              </div>
+              <div class="card__data-overview">
+                <div class="card__monthly-total">
+                  <h2>Total this month</h2>
+                  <div class="account-total">&dollar;478.33</div>
+                </div>
+                <div class="card__monthly-increase">
+                  <span class="percent">+2.4%</span>
+                  <span class="label">from last month</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
