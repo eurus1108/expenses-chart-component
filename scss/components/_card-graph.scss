@@ -1,0 +1,95 @@
+@use "../util/" as *;
+@use "../abstract/" as *;
+
+.card__element {
+  width: 100%;
+}
+
+.card__balance {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: {
+    bottom: 1.6rem;
+  }
+  padding: 2rem 2rem 2.2rem;
+  background-color: $color-background-primary;
+  border-radius: 1rem;
+}
+
+.card__account-overview h2 {
+  margin-bottom: 0.4rem;
+}
+
+.card__logo-container {
+  margin: {
+    right: 0.4rem;
+  }
+  max-width: 6rem;
+}
+
+.card__data-container {
+  padding: 0 2rem;
+  background-color: $color-background-subtle;
+  border-radius: 1rem;
+}
+
+.card__graph-overview {
+  padding: 2.4rem 0 2.6rem;
+  border-bottom: 0.2rem solid $color-background-default;
+}
+
+.card__graph-overview h1 {
+  margin: {
+    bottom: 5.2rem;
+  }
+}
+
+.card__graph-data {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.card__graph-bar {
+  margin: {
+    bottom: 1.1rem;
+  }
+  width: 3.3rem;
+  background-color: $color-background-primary;
+  border-radius: 0.5rem;
+}
+
+$height: (
+  mon: 5rem,
+  tue: 10rem,
+  wed: 15rem,
+  thu: 8.9rem,
+  fri: 6.7rem,
+  sat: 12.4rem,
+  sun: 7.3rem,
+);
+
+// @for $i from 1 through 7 {
+//   @each $day, $val in $height {
+//     .card__graph-bar:nth-child(#{$i}) {
+//       height: #{$val};
+//     }
+//   }
+// }
+
+@each $day, $val in $height {
+  @for $i from 1 through 7 {
+    .card__graph-bar:nth-child(#{$i}) {
+      height: #{$val};
+    }
+  }
+}
+
+// @for $i from 1 through 7 {
+//   .card__graph-bar:nth-child(#{$i}) {
+//     @each $day, $val in $height {
+//       height: #{$val};
+//     }
+//   }
+// }
