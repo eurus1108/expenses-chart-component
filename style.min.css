@@ -123,6 +123,10 @@ h2 {
   font-size: var(--font-size-300);
 }
 
+.card__day {
+  font-size: var(--font-size-100);
+}
+
 .card__monthly-total .account-total {
   font-size: var(--font-size-400);
 }
@@ -135,6 +139,10 @@ h2 {
 
 .card__monthly-increase .label {
   letter-spacing: 0.005em;
+}
+
+.card__monthly-total h2 {
+  letter-spacing: 0.01em;
 }
 
 .card__element {
@@ -157,7 +165,8 @@ h2 {
   border-radius: 1rem;
 }
 
-.card__account-overview h2 {
+.card__account-overview h2,
+.card__monthly-total h2 {
   margin-bottom: 0.4rem;
 }
 
@@ -173,7 +182,7 @@ h2 {
 }
 
 .card__graph-overview {
-  padding: 2.4rem 0 2.6rem;
+  padding: 2.4rem 0;
   border-bottom: 0.2rem solid var(--colorBrown200);
 }
 
@@ -181,16 +190,22 @@ h2 {
   margin-bottom: 5.2rem;
 }
 
-.card__graph-data {
+.card__graph-data,
+.card__data-overview {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.card__graph-bar-container {
+  text-align: center;
+  cursor: pointer;
 }
 
 .card__graph-bar {
@@ -200,200 +215,43 @@ h2 {
   border-radius: 0.5rem;
 }
 
-.card__graph-bar:nth-child(1) {
+.card__graph-bar-container:nth-child(1) .card__graph-bar {
   height: 5rem;
 }
 
-.card__graph-bar:nth-child(2) {
-  height: 5rem;
-}
-
-.card__graph-bar:nth-child(3) {
-  height: 5rem;
-}
-
-.card__graph-bar:nth-child(4) {
-  height: 5rem;
-}
-
-.card__graph-bar:nth-child(5) {
-  height: 5rem;
-}
-
-.card__graph-bar:nth-child(6) {
-  height: 5rem;
-}
-
-.card__graph-bar:nth-child(7) {
-  height: 5rem;
-}
-
-.card__graph-bar:nth-child(1) {
+.card__graph-bar-container:nth-child(2) .card__graph-bar {
   height: 10rem;
 }
 
-.card__graph-bar:nth-child(2) {
-  height: 10rem;
-}
-
-.card__graph-bar:nth-child(3) {
-  height: 10rem;
-}
-
-.card__graph-bar:nth-child(4) {
-  height: 10rem;
-}
-
-.card__graph-bar:nth-child(5) {
-  height: 10rem;
-}
-
-.card__graph-bar:nth-child(6) {
-  height: 10rem;
-}
-
-.card__graph-bar:nth-child(7) {
-  height: 10rem;
-}
-
-.card__graph-bar:nth-child(1) {
+.card__graph-bar-container:nth-child(3) .card__graph-bar {
   height: 15rem;
+  background-color: var(--colorCyan100);
 }
 
-.card__graph-bar:nth-child(2) {
-  height: 15rem;
-}
-
-.card__graph-bar:nth-child(3) {
-  height: 15rem;
-}
-
-.card__graph-bar:nth-child(4) {
-  height: 15rem;
-}
-
-.card__graph-bar:nth-child(5) {
-  height: 15rem;
-}
-
-.card__graph-bar:nth-child(6) {
-  height: 15rem;
-}
-
-.card__graph-bar:nth-child(7) {
-  height: 15rem;
-}
-
-.card__graph-bar:nth-child(1) {
+.card__graph-bar-container:nth-child(4) .card__graph-bar {
   height: 8.9rem;
 }
 
-.card__graph-bar:nth-child(2) {
-  height: 8.9rem;
-}
-
-.card__graph-bar:nth-child(3) {
-  height: 8.9rem;
-}
-
-.card__graph-bar:nth-child(4) {
-  height: 8.9rem;
-}
-
-.card__graph-bar:nth-child(5) {
-  height: 8.9rem;
-}
-
-.card__graph-bar:nth-child(6) {
-  height: 8.9rem;
-}
-
-.card__graph-bar:nth-child(7) {
-  height: 8.9rem;
-}
-
-.card__graph-bar:nth-child(1) {
+.card__graph-bar-container:nth-child(5) .card__graph-bar {
   height: 6.7rem;
 }
 
-.card__graph-bar:nth-child(2) {
-  height: 6.7rem;
-}
-
-.card__graph-bar:nth-child(3) {
-  height: 6.7rem;
-}
-
-.card__graph-bar:nth-child(4) {
-  height: 6.7rem;
-}
-
-.card__graph-bar:nth-child(5) {
-  height: 6.7rem;
-}
-
-.card__graph-bar:nth-child(6) {
-  height: 6.7rem;
-}
-
-.card__graph-bar:nth-child(7) {
-  height: 6.7rem;
-}
-
-.card__graph-bar:nth-child(1) {
+.card__graph-bar-container:nth-child(6) .card__graph-bar {
   height: 12.4rem;
 }
 
-.card__graph-bar:nth-child(2) {
-  height: 12.4rem;
-}
-
-.card__graph-bar:nth-child(3) {
-  height: 12.4rem;
-}
-
-.card__graph-bar:nth-child(4) {
-  height: 12.4rem;
-}
-
-.card__graph-bar:nth-child(5) {
-  height: 12.4rem;
-}
-
-.card__graph-bar:nth-child(6) {
-  height: 12.4rem;
-}
-
-.card__graph-bar:nth-child(7) {
-  height: 12.4rem;
-}
-
-.card__graph-bar:nth-child(1) {
+.card__graph-bar-container:nth-child(7) .card__graph-bar {
   height: 7.3rem;
 }
 
-.card__graph-bar:nth-child(2) {
-  height: 7.3rem;
+.card__data-overview {
+  padding: 2.4rem 0;
 }
 
-.card__graph-bar:nth-child(3) {
-  height: 7.3rem;
-}
-
-.card__graph-bar:nth-child(4) {
-  height: 7.3rem;
-}
-
-.card__graph-bar:nth-child(5) {
-  height: 7.3rem;
-}
-
-.card__graph-bar:nth-child(6) {
-  height: 7.3rem;
-}
-
-.card__graph-bar:nth-child(7) {
-  height: 7.3rem;
+.card__monthly-increase .percent,
+.card__monthly-increase .label {
+  display: block;
+  text-align: right;
 }
 
 .h-wrapper {

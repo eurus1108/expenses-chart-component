@@ -17,7 +17,8 @@
   border-radius: 1rem;
 }
 
-.card__account-overview h2 {
+.card__account-overview h2,
+.card__monthly-total h2 {
   margin-bottom: 0.4rem;
 }
 
@@ -35,7 +36,7 @@
 }
 
 .card__graph-overview {
-  padding: 2.4rem 0 2.6rem;
+  padding: 2.4rem 0;
   border-bottom: 0.2rem solid $color-background-default;
 }
 
@@ -45,10 +46,16 @@
   }
 }
 
-.card__graph-data {
+.card__graph-data,
+.card__data-overview {
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
   justify-content: space-between;
+}
+
+.card__graph-bar-container {
+  text-align: center;
+  cursor: pointer;
 }
 
 .card__graph-bar {
@@ -60,36 +67,41 @@
   border-radius: 0.5rem;
 }
 
-$height: (
-  mon: 5rem,
-  tue: 10rem,
-  wed: 15rem,
-  thu: 8.9rem,
-  fri: 6.7rem,
-  sat: 12.4rem,
-  sun: 7.3rem,
-);
-
-// @for $i from 1 through 7 {
-//   @each $day, $val in $height {
-//     .card__graph-bar:nth-child(#{$i}) {
-//       height: #{$val};
-//     }
-//   }
-// }
-
-@each $day, $val in $height {
-  @for $i from 1 through 7 {
-    .card__graph-bar:nth-child(#{$i}) {
-      height: #{$val};
-    }
-  }
+.card__graph-bar-container:nth-child(1) .card__graph-bar {
+  height: 5rem;
 }
 
-// @for $i from 1 through 7 {
-//   .card__graph-bar:nth-child(#{$i}) {
-//     @each $day, $val in $height {
-//       height: #{$val};
-//     }
-//   }
-// }
+.card__graph-bar-container:nth-child(2) .card__graph-bar {
+  height: 10rem;
+}
+
+.card__graph-bar-container:nth-child(3) .card__graph-bar {
+  height: 15rem;
+  background-color: $color-background-secondary;
+}
+
+.card__graph-bar-container:nth-child(4) .card__graph-bar {
+  height: 8.9rem;
+}
+
+.card__graph-bar-container:nth-child(5) .card__graph-bar {
+  height: 6.7rem;
+}
+
+.card__graph-bar-container:nth-child(6) .card__graph-bar {
+  height: 12.4rem;
+}
+
+.card__graph-bar-container:nth-child(7) .card__graph-bar {
+  height: 7.3rem;
+}
+
+.card__data-overview {
+  padding: 2.4rem 0;
+}
+
+.card__monthly-increase .percent,
+.card__monthly-increase .label {
+  display: block;
+  text-align: right;
+}

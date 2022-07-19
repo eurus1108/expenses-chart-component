@@ -38,6 +38,10 @@ h2 {
   font-size: var(--font-size-300);
 }
 
+.card__day {
+  font-size: var(--font-size-100);
+}
+
 .card__monthly-total .account-total {
   font-size: var(--font-size-400);
 }
@@ -50,4 +54,8 @@ h2 {
 
 .card__monthly-increase .label {
   @include letter-spacing(0.5);
+}
+
+.card__monthly-total h2 {
+  @include letter-spacing(1);
 }
