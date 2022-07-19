@@ -1,5 +1,5 @@
 const day = document.querySelectorAll("[data-day]");
-const amount = document.querySelectorAll("[data-amount]");
+const amount = document.querySelectorAll("[data-modal] > span");
 const api_url = "./data.json";
 
 const getData = async () => {
@@ -10,7 +10,24 @@ const getData = async () => {
     const obj = data[i];
 
     day[i].innerHTML = obj.day;
+    amount[i].innerHTML = "$" + obj.amount;
   }
 };
 
 getData();
+
+const modalOverlay = document.querySelectorAll("[data-modal]");
+const barGroup = document.querySelectorAll("[data-bar-container]");
+
+barGroup.forEach((elm) => {
+  elm.addEventListener("mouseover", (e) => {
+    modalOverlay.classlist.add("visible");
+    console.log(e);
+  });
+  elm.addEventListener("mouseleave", (e) => {
+    modalOverlay.classlist.remove("visible");
+    console.log(e);
+  });
+});
+
+console.log(modalOverlay);

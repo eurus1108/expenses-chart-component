@@ -52,6 +52,11 @@ h2 {
   font-weight: $font-weight-bold;
 }
 
+.card__modal-overlay span {
+  font-size: var(--font-size-200);
+  font-weight: $font-weight-bold;
+}
+
 .card__monthly-increase .label {
   @include letter-spacing(0.5);
 }

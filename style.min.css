@@ -137,6 +137,11 @@ h2 {
   font-weight: 700;
 }
 
+.card__modal-overlay span {
+  font-size: var(--font-size-200);
+  font-weight: 700;
+}
+
 .card__monthly-increase .label {
   letter-spacing: 0.005em;
 }
@@ -204,8 +209,21 @@ h2 {
 }
 
 .card__graph-bar-container {
+  position: relative;
   text-align: center;
   cursor: pointer;
+}
+
+.card__modal-overlay {
+  position: absolute;
+  top: -4.4rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 99;
+  padding: 0.8rem;
+  background-color: var(--colorBrown400);
+  border-radius: 0.5rem;
 }
 
 .card__graph-bar {
