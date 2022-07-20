@@ -65,9 +65,14 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 99;
+  display: none;
   padding: 0.8rem;
   background-color: $color-background-strong;
   border-radius: 0.5rem;
+}
+
+.card__modal-overlay.visible {
+  display: block;
 }
 
 .card__graph-bar {

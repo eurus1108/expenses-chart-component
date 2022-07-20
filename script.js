@@ -21,13 +21,13 @@ const barGroup = document.querySelectorAll("[data-bar-container]");
 
 barGroup.forEach((elm) => {
   elm.addEventListener("mouseover", (e) => {
-    modalOverlay.classlist.add("visible");
-    console.log(e);
+    modalOverlay.forEach((elm) => {
+      elm.classList.add("visible");
+    });
   });
   elm.addEventListener("mouseleave", (e) => {
-    modalOverlay.classlist.remove("visible");
-    console.log(e);
+    modalOverlay.forEach((elm) => {
+      elm.classList.remove("visible");
+    });
   });
 });
-
-console.log(modalOverlay);
