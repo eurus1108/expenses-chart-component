@@ -348,4 +348,17 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
+}
+@media only screen and (min-width: 62.3125em) {
+  .card__container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media only screen and (min-width: 62.3125em) {
+  .card__element {
+    padding-top: 18.2rem;
+  }
 }/*# sourceMappingURL=style.min.css.map */

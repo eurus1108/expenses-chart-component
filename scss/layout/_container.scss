@@ -16,4 +16,16 @@
   display: flex;
   align-items: center;
   height: 100vh;
+
+  @include breakpoint-up(large) {
+    align-items: flex-start;
+  }
+}
+
+.card__element {
+  @include breakpoint-up(large) {
+    padding: {
+      top: 18.2rem;
+    }
+  }
 }
