@@ -15,19 +15,3 @@ const getData = async () => {
 };
 
 getData();
-
-const modalOverlay = document.querySelectorAll("[data-modal]");
-const barGroup = document.querySelectorAll("[data-bar-container]");
-
-barGroup.forEach((elm) => {
-  elm.addEventListener("mouseover", (e) => {
-    modalOverlay.forEach((elm) => {
-      elm.classList.add("visible");
-    });
-  });
-  elm.addEventListener("mouseleave", (e) => {
-    modalOverlay.forEach((elm) => {
-      elm.classList.remove("visible");
-    });
-  });
-});

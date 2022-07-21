@@ -12,7 +12,7 @@
   --font-size-300: 2.4rem;
   --font-size-400: 3rem;
 }
-@media only screen and (min-width: 62.3125em) {
+@media only screen and (min-width: 30em) {
   :root {
     --font-size-100: 1.5rem;
     --font-size-200: 1.8rem;
@@ -150,6 +150,11 @@ h2 {
   letter-spacing: 0.01em;
 }
 
+* {
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
 .card__element {
   width: 100%;
 }
@@ -186,8 +191,12 @@ h2 {
   border-radius: 1rem;
 }
 
-.card__graph-overview {
+.card__graph-overview,
+.card__data-overview {
   padding: 2.4rem 0;
+}
+
+.card__graph-overview {
   border-bottom: 0.2rem solid var(--colorBrown200);
 }
 
@@ -225,6 +234,10 @@ h2 {
   padding: 0.8rem;
   background-color: var(--colorBrown400);
   border-radius: 0.5rem;
+}
+
+.card__graph-bar-container:hover .card__modal-overlay {
+  display: block;
 }
 
 .card__modal-overlay.visible {
@@ -267,16 +280,55 @@ h2 {
   height: 7.3rem;
 }
 
-.card__data-overview {
-  padding: 2.4rem 0;
-}
-
 .card__monthly-increase .percent,
 .card__monthly-increase .label {
   display: block;
   text-align: right;
 }
 
+@media only screen and (min-width: 30em) {
+  .card__balance {
+    margin-bottom: 2.4rem;
+    padding: 2.7rem 3.2rem 2.5rem;
+  }
+  .card__balance,
+.card__data-container {
+    border-radius: 2rem;
+  }
+  .card__account-overview h2 {
+    margin-bottom: 0.8rem;
+  }
+  .card__logo-container {
+    margin-right: 0.7rem;
+    max-width: 100%;
+  }
+  .card__data-container {
+    padding: 0 4rem;
+  }
+  .card__graph-overview,
+.card__data-overview {
+    padding: 3.2rem 0;
+  }
+  .card__graph-overview h1 {
+    margin-bottom: 6.6rem;
+  }
+  .card__graph-bar {
+    margin-bottom: 0.8rem;
+    width: 5.1rem;
+  }
+  .card__data-overview {
+    padding-bottom: 4.1rem;
+  }
+  .card__monthly-total h2 {
+    margin-bottom: 0.2rem;
+  }
+  .card__monthly-increase {
+    margin-bottom: 0.8rem;
+  }
+  .card__monthly-increase .percent {
+    margin-bottom: 0.1rem;
+  }
+}
 .h-wrapper {
   padding-right: 1.6rem;
   padding-left: 1.6rem;

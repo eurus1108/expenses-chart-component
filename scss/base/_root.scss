@@ -13,7 +13,7 @@
         --font-size-#{$prop}: #{$value};
       }
     } @else {
-      @include breakpoint-up(large) {
+      @include breakpoint-up(medium) {
         @each $prop, $value in $property {
           --font-size-#{$prop}: #{$value};
         }
